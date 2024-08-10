@@ -1,0 +1,29 @@
+{
+  
+  "name": "project-portfolio",
+  "version": "1.0.0",
+  "main": "index.js",
+  "engines" : {
+    "node": "v20.15.1",
+    "npm" : "10.8.2"
+  },
+  "scripts": {
+    "client-install": "npm install --prefix client",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "start": "node server.js",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "gh-pages": "^6.1.1",
+    "mongoose": "^8.5.1",
+    "nodemon": "^3.1.4"
+  }
+}
